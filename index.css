@@ -1,0 +1,255 @@
+:root {
+  --main-yellow: #bbd547;
+  --main-green: #81b36e;
+  --main-blue: #429099;
+  --main-dblue: #1375b8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+i {
+  color: gray;
+  font-size: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* ------------------------------- */
+/* HEADER */
+/* ------------------------------- */
+.header {
+  padding: 10px 16px;
+  position: relative;
+}
+
+.header .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  width: 120px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar:hover i,
+.navbar:active i,
+.navbar:focus i,
+.navbar:visited i {
+  color: var(--main-yellow);
+}
+
+.search-bar {
+  margin-left: 16px;
+}
+
+.search-bar:hover i,
+.search-bar:active i,
+.search-bar:focus i,
+.search-bar:visited i {
+  color: var(--main-yellow);
+}
+
+.dropdown-menu {
+  position: absolute;
+  margin-top: 10px;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-menu ul li {
+  width: 100%;
+  margin-bottom: 1px;
+  padding: 5px 10px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.dropdown-menu ul li:nth-child(1) {
+  background: var(--main-yellow);
+}
+.dropdown-menu ul li:nth-child(2) {
+  background: var(--main-green);
+}
+.dropdown-menu ul li:nth-child(3) {
+  background: var(--main-blue);
+}
+.dropdown-menu ul li:nth-child(4) {
+  background: var(--main-dblue);
+}
+
+.search-container {
+  display: none;
+}
+
+.search-container.active {
+  display: block;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+/* ------------------------------- */
+/* HEADER - MIN 320PX */
+/* ------------------------------- */
+.header-icons {
+  display: none;
+}
+
+.header-icons i {
+  margin: 0 10px;
+}
+
+.header-icons .icon-1:hover i,
+.header-icons .icon-1:active i,
+.header-icons .icon-1:focus i,
+.header-icons .icon-1:visited i {
+  color: var(--main-yellow);
+}
+
+.header-icons .icon-2:hover i,
+.header-icons .icon-2:active i,
+.header-icons .icon-2:focus i,
+.header-icons .icon-2:visited i {
+  color: var(--main-green);
+}
+
+.header-icons .icon-3:hover i,
+.header-icons .icon-3:active i,
+.header-icons .icon-3:focus i,
+.header-icons .icon-3:visited i {
+  color: var(--main-blue);
+}
+
+.header-icons .icon-4:hover i,
+.header-icons .icon-4:active i,
+.header-icons .icon-4:focus i,
+.header-icons .icon-4:visited i {
+  color: var(--main-dblue);
+}
+
+/* ------------------------------- */
+/* HEADER - MIN 768PX */
+/* ------------------------------- */
+.header-links {
+  display: none;
+}
+
+.header-links ul {
+  display: flex;
+  align-items: center;
+}
+
+.header-links ul li {
+  margin-left: 30px;
+}
+
+.header-links ul a {
+  color: gray;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.header-links ul .anchor-1:hover,
+.header-links ul .anchor-1:active,
+.header-links ul .anchor-1:focus,
+.header-links ul .anchor-1:visited {
+  color: var(--main-yellow);
+}
+
+.header-links ul .anchor-2:hover,
+.header-links ul .anchor-2:active,
+.header-links ul .anchor-2:focus,
+.header-links ul .anchor-2:visited {
+  color: var(--main-green);
+}
+.header-links ul .anchor-3:hover,
+.header-links ul .anchor-3:active,
+.header-links ul .anchor-3:focus,
+.header-links ul .anchor-3:visited {
+  color: var(--main-blue);
+}
+.header-links ul .anchor-4:hover,
+.header-links ul .anchor-4:active,
+.header-links ul .anchor-4:focus,
+.header-links ul .anchor-4:visited {
+  color: var(--main-dblue);
+}
+
+.header-links p {
+  margin-left: 25px;
+  color: gray;
+}
+
+/* ------------------------------- */
+/* MEDIA QUERIES */
+/* ------------------------------- */
+/* 480PX */
+@media (min-width: 480px) {
+  .header-icons {
+    display: flex;
+  }
+  .navbar,
+  .dropdown-menu {
+    display: none;
+  }
+  .dropdown-menu.active {
+    display: none;
+  }
+}
+
+/* 768PX */
+@media (min-width: 768px) {
+  .header-icons {
+    display: none;
+  }
+  .header-links {
+    display: block;
+  }
+  .search-bar {
+    margin-left: 50px;
+  }
+}
