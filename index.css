@@ -297,8 +297,8 @@ main .gradient {
 }
 /* WHO WE ARE SECTION */
 .container {
-    max-width: 550px;
-    margin: 0 auto;
+  max-width: 550px;
+  margin: 0 auto;
 }
 .who-we-are {
   padding: 30px;
@@ -357,6 +357,40 @@ main .gradient {
   color: gray;
   font-weight: 600;
   margin-top: 10px;
+}
+/* WHAT WE DO SECTION */
+.what-we-do {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-we-do h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: gray;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.what-we-do .card {
+  background: lightgray;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.what-we-do i {
+  margin: auto;
+  font-size: 50px;
+}
+
+/* CHANGE ICON COLOR ON HOVER */
+.who-we-are .image:hover i,
+.what-we-do .card:hover i {
+  color: var(--main-yellow);
 }
 
 /* ------------------------------- */
@@ -430,6 +464,21 @@ main .gradient {
     flex-direction: column;
     justify-content: space-between;
     min-width: 200px;
+  }
+  /* WHAT WE DO SECTION */
+  .what-we-do {
+    padding: 30px;
+  }
+  .what-we-do h1 {
+    align-self: flex-start;
+  }
+  .what-we-do .flex-container {
+    display: flex;
+    justify-content: center;
+  }
+  .what-we-do .one,
+  .what-we-do .two {
+    margin-right: 50px;
   }
 }
 
