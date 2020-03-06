@@ -1,3 +1,6 @@
+/* ------------------------------- */
+/* ROOT VARIABLES */
+/* ------------------------------- */
 :root {
   --main-yellow: #bbd547;
   --main-green: #81b36e;
@@ -5,6 +8,9 @@
   --main-dblue: #1375b8;
 }
 
+/* ------------------------------- */
+/* RESETS */
+/* ------------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,6 +22,7 @@ html {
 }
 
 body {
+  line-height: 1.3;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -39,6 +46,89 @@ button {
   border: none;
   cursor: pointer;
   padding: 5px;
+}
+
+/* ------------------------------- */
+/* PSEUDO-CLASSES */
+/* ------------------------------- */
+
+/* HEADER */
+.main-nav button:hover i,
+.main-nav button:active i,
+.main-nav button:focus i,
+.main-nav button:visited i,
+.header-icons a:first-child:hover i,
+.header-icons a:first-child:active i,
+.header-icons a:first-child:focus i,
+.header-icons a:first-child:visited i,
+.header-links ul li:first-child a:hover,
+.header-links ul li:first-child a:active,
+.header-links ul li:first-child a:focus,
+.header-links ul li:first-child a:visited {
+  color: var(--main-yellow);
+}
+
+.header-icons a:nth-child(2):hover i,
+.header-icons a:nth-child(2):active i,
+.header-icons a:nth-child(2):focus i,
+.header-icons a:nth-child(2):visited i,
+.header-links ul li:nth-of-type(2) a:hover,
+.header-links ul li:nth-of-type(2) a:active,
+.header-links ul li:nth-of-type(2) a:focus,
+.header-links ul li:nth-of-type(2) a:visited {
+  color: var(--main-green);
+}
+
+.header-icons a:nth-child(3):hover i,
+.header-icons a:nth-child(3):active i,
+.header-icons a:nth-child(3):focus i,
+.header-icons a:nth-child(3):visited i,
+.header-links ul li:nth-of-type(3) a:hover,
+.header-links ul li:nth-of-type(3) a:active,
+.header-links ul li:nth-of-type(3) a:focus,
+.header-links ul li:nth-of-type(3) a:visited {
+  color: var(--main-blue);
+}
+
+.header-icons a:last-child:hover i,
+.header-icons a:last-child:active i,
+.header-icons a:last-child:focus i,
+.header-icons a:last-child:visited i,
+.header-links ul li:last-child a:hover,
+.header-links ul li:last-child a:active,
+.header-links ul li:last-child a:focus,
+.header-links ul li:last-child a:visited {
+  color: var(--main-dblue);
+}
+
+.dropdown-menu ul li:first-child {
+  background-color: var(--main-yellow);
+}
+
+.dropdown-menu ul li:nth-child(2) {
+  background-color: var(--main-green);
+}
+
+.dropdown-menu ul li:nth-child(3) {
+  background-color: var(--main-blue);
+}
+
+.dropdown-menu ul li:last-child {
+  background-color: var(--main-dblue);
+}
+
+/* MAIN */
+.who-we-are .image:hover i,
+.what-we-do .card:hover i {
+  color: var(--main-yellow);
+}
+
+/* FOOTER */
+.footer .circle-bg:hover i,
+.footer .circle-bg:active i,
+.footer .circle-bg:focus i,
+.footer .circle-bg:visited i {
+  color: var(--main-yellow);
 }
 
 /* ------------------------------- */
@@ -68,22 +158,8 @@ button {
   align-items: center;
 }
 
-.navbar:hover i,
-.navbar:active i,
-.navbar:focus i,
-.navbar:visited i {
-  color: var(--main-yellow);
-}
-
 .search-bar {
   margin-left: 16px;
-}
-
-.search-bar:hover i,
-.search-bar:active i,
-.search-bar:focus i,
-.search-bar:visited i {
-  color: var(--main-yellow);
 }
 
 .dropdown-menu {
@@ -92,6 +168,7 @@ button {
   left: 0;
   width: 100%;
   display: none;
+  background: white;
 }
 
 .dropdown-menu.active {
@@ -105,19 +182,6 @@ button {
   color: white;
   text-transform: uppercase;
   font-size: 12px;
-}
-
-.dropdown-menu ul li:nth-child(1) {
-  background: var(--main-yellow);
-}
-.dropdown-menu ul li:nth-child(2) {
-  background: var(--main-green);
-}
-.dropdown-menu ul li:nth-child(3) {
-  background: var(--main-blue);
-}
-.dropdown-menu ul li:nth-child(4) {
-  background: var(--main-dblue);
 }
 
 .search-container {
@@ -147,34 +211,6 @@ button {
   margin: 0 10px;
 }
 
-.header-icons .icon-1:hover i,
-.header-icons .icon-1:active i,
-.header-icons .icon-1:focus i,
-.header-icons .icon-1:visited i {
-  color: var(--main-yellow);
-}
-
-.header-icons .icon-2:hover i,
-.header-icons .icon-2:active i,
-.header-icons .icon-2:focus i,
-.header-icons .icon-2:visited i {
-  color: var(--main-green);
-}
-
-.header-icons .icon-3:hover i,
-.header-icons .icon-3:active i,
-.header-icons .icon-3:focus i,
-.header-icons .icon-3:visited i {
-  color: var(--main-blue);
-}
-
-.header-icons .icon-4:hover i,
-.header-icons .icon-4:active i,
-.header-icons .icon-4:focus i,
-.header-icons .icon-4:visited i {
-  color: var(--main-dblue);
-}
-
 /* ------------------------------- */
 /* HEADER - MIN 768PX */
 /* ------------------------------- */
@@ -195,32 +231,6 @@ button {
   color: gray;
   text-transform: uppercase;
   font-weight: 600;
-}
-
-.header-links ul .anchor-1:hover,
-.header-links ul .anchor-1:active,
-.header-links ul .anchor-1:focus,
-.header-links ul .anchor-1:visited {
-  color: var(--main-yellow);
-}
-
-.header-links ul .anchor-2:hover,
-.header-links ul .anchor-2:active,
-.header-links ul .anchor-2:focus,
-.header-links ul .anchor-2:visited {
-  color: var(--main-green);
-}
-.header-links ul .anchor-3:hover,
-.header-links ul .anchor-3:active,
-.header-links ul .anchor-3:focus,
-.header-links ul .anchor-3:visited {
-  color: var(--main-blue);
-}
-.header-links ul .anchor-4:hover,
-.header-links ul .anchor-4:active,
-.header-links ul .anchor-4:focus,
-.header-links ul .anchor-4:visited {
-  color: var(--main-dblue);
 }
 
 .header-links p {
@@ -394,12 +404,6 @@ button {
   font-size: 50px;
 }
 
-/* CHANGE MAIN ICON COLOR ON HOVER */
-.who-we-are .image:hover i,
-.what-we-do .card:hover i {
-  color: var(--main-yellow);
-}
-
 /* FOOTER */
 .footer {
   background: gray;
@@ -409,25 +413,18 @@ button {
   padding: 10px;
 }
 
-.footer .social-media {
+.footer .social-media-container {
   display: flex;
   align-items: center;
 }
 
-.footer .img-bg {
+.footer .circle-bg {
   background: white;
   width: 30px;
   height: 30px;
   display: flex;
   border-radius: 50%;
   margin-right: 15px;
-}
-
-.footer .img-bg:hover i,
-.footer .img-bg:active i,
-.footer .img-bg:focus i,
-.footer .img-bg:visited i {
-  color: var(--main-yellow);
 }
 
 .footer i {
@@ -455,6 +452,7 @@ button {
   .dropdown-menu.active {
     display: none;
   }
+
   /* HERO SECTION*/
   .hero .text-slider {
     display: none;
@@ -478,6 +476,7 @@ button {
   .hero .dots-container {
     display: flex;
   }
+
   /* WHO WE ARE SECTION*/
   .who-we-are .card-container {
     margin-right: auto;
@@ -497,9 +496,6 @@ button {
   .who-we-are .card {
     margin-bottom: 50px;
   }
-  .who-we-are .card > div {
-    flex: 1;
-  }
   .who-we-are .description {
     display: block;
     font-size: 12px;
@@ -511,14 +507,16 @@ button {
     justify-content: space-between;
     min-width: 200px;
   }
+
   /* WHAT WE DO SECTION */
   .what-we-do {
     padding: 30px;
+    align-items: flex-start;
   }
   .what-we-do h1 {
     align-self: flex-start;
   }
-  .what-we-do .flex-container {
+  .what-we-do .flex {
     display: flex;
     justify-content: center;
   }
@@ -526,6 +524,7 @@ button {
   .what-we-do .two {
     margin-right: 50px;
   }
+
   /* FOOTER */
   .footer {
     padding: 10px 30px;
@@ -544,6 +543,7 @@ button {
   .search-bar {
     margin-left: 50px;
   }
+
   /* HERO SECTION */
   .hero .container-bg {
     height: 350px;
@@ -551,6 +551,7 @@ button {
   .hero img {
     margin-right: 40px;
   }
+
   /* FOOTER */
   .footer-links {
     display: block;
@@ -566,34 +567,8 @@ button {
   }
 
   .footer-links ul a {
-    color: gray;
+    color: darkgray;
     text-transform: uppercase;
     font-weight: 600;
-  }
-
-  .footer-links ul .anchor-1:hover,
-  .footer-links ul .anchor-1:active,
-  .footer-links ul .anchor-1:focus,
-  .footer-links ul .anchor-1:visited {
-    color: var(--main-yellow);
-  }
-
-  .footer-links ul .anchor-2:hover,
-  .footer-links ul .anchor-2:active,
-  .footer-links ul .anchor-2:focus,
-  .footer-links ul .anchor-2:visited {
-    color: var(--main-green);
-  }
-  .footer-links ul .anchor-3:hover,
-  .footer-links ul .anchor-3:active,
-  .footer-links ul .anchor-3:focus,
-  .footer-links ul .anchor-3:visited {
-    color: var(--main-blue);
-  }
-  .footer-links ul .anchor-4:hover,
-  .footer-links ul .anchor-4:active,
-  .footer-links ul .anchor-4:focus,
-  .footer-links ul .anchor-4:visited {
-    color: var(--main-dblue);
   }
 }
