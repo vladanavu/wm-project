@@ -295,12 +295,76 @@ main .gradient {
   background: gray;
   margin: 0 5px;
 }
+/* WHO WE ARE SECTION */
+.container {
+    max-width: 550px;
+    margin: 0 auto;
+}
+.who-we-are {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.who-we-are h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: gray;
+  text-align: center;
+  font-weight: 500;
+}
+
+.who-we-are .card-container {
+  margin-top: 15px;
+}
+
+.who-we-are .card {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  font-weight: 600;
+  max-width: 200px;
+}
+
+.who-we-are .image {
+  background: lightgray;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.who-we-are .card i {
+  margin: auto;
+  font-size: 50px;
+}
+
+.who-we-are .card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.who-we-are .description {
+  display: none;
+}
+
+.who-we-are button {
+  align-self: flex-end;
+  text-transform: uppercase;
+  color: gray;
+  font-weight: 600;
+  margin-top: 10px;
+}
 
 /* ------------------------------- */
 /* MEDIA QUERIES */
 /* ------------------------------- */
 /* 480PX */
 @media (min-width: 480px) {
+  /* HEADER */
   .header-icons {
     display: flex;
   }
@@ -311,6 +375,7 @@ main .gradient {
   .dropdown-menu.active {
     display: none;
   }
+  /* HERO SECTION*/
   .hero .text-slider {
     display: none;
   }
@@ -333,10 +398,44 @@ main .gradient {
   .hero .dots-container {
     display: flex;
   }
+  /* WHO WE ARE SECTION*/
+  .who-we-are .card-container {
+    margin-right: auto;
+  }
+  .who-we-are .card {
+    display: flex;
+    flex-direction: row;
+  }
+  .who-we-are h1 {
+    align-self: flex-start;
+  }
+  .who-we-are .image {
+    min-width: 200px;
+    max-width: 200px;
+    margin-bottom: 0;
+  }
+  .who-we-are .card {
+    margin-bottom: 50px;
+  }
+  .who-we-are .card > div {
+    flex: 1;
+  }
+  .who-we-are .description {
+    display: block;
+    font-size: 12px;
+  }
+  .who-we-are .card-text {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 200px;
+  }
 }
 
 /* 768PX */
 @media (min-width: 768px) {
+  /* HEADER */
   .header-icons {
     display: none;
   }
@@ -346,6 +445,7 @@ main .gradient {
   .search-bar {
     margin-left: 50px;
   }
+  /* HERO */
   .hero .container-bg {
     height: 350px;
   }
