@@ -6,8 +6,8 @@ navbar.addEventListener('click', () => {
     if (searchContainer.classList.contains('active')) {
         searchContainer.classList.remove('active')
     }
-    dropdownMenu.classList.toggle('active')
-})
+    dropdownMenu.classList.toggle('active');
+});
 
 // TOGGLE SEARCH-BAR
 const searchBar = document.querySelector('.search-bar');
@@ -17,5 +17,12 @@ searchBar.addEventListener('click', () => {
     if (dropdownMenu.classList.contains('active')) {
         dropdownMenu.classList.remove('active')
     }
-    searchContainer.classList.toggle('active')
-})
+    searchContainer.classList.toggle('active');
+});
+
+// SCROLL UP
+const scrollUp = document.querySelector('.scroll-up');
+
+scrollUp.addEventListener('click', () => {
+    window.scrollTo(0, 0);
+});
